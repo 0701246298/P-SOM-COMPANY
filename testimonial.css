@@ -1,0 +1,162 @@
+
+:root {
+  --bg: #edf2f8;
+  --card-light: #ffffff;
+  --text-dark: #48556a;
+  --purple: #19202d;
+  --grayblue: #48556a;
+  --darkblue: #19202d;
+}
+
+
+body.dark {
+  --bg: #0f172a;
+  --card-light: #1e293b;
+  --text-dark: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  transition: 0.3s ease;
+   width: 100vw;
+  
+}
+
+
+.testimonial-header h2 {
+  font-weight: 300;
+  color: var(--text-light);
+  font-size: 26px;
+   margin-top: 10px;
+  margin-bottom: 20px;
+  
+}
+
+.testimonial-header h1 {
+  font-weight: 600;
+  font-size: 36px;
+  margin: 0 8px;
+  margin-top: 20px;
+}
+
+
+/* Grid Layout */
+.testimonial-section {
+  margin: 80px 20px;
+  padding:20px 10%;
+  text-align: center;
+  margin-top: 0px;
+
+}
+.testimonials{
+  margin-bottom: 0px;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "one one two five"
+    "three four four five";
+
+}
+
+
+/* Card Base */
+.card {
+  padding: 30px;
+  border-radius: 15px;
+  color: white;
+  position: relative;
+  transition: all 0.35s ease;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+/* Card Positions */
+.card-1 { grid-area: one; background: var(--purple);  }
+.card-2 { grid-area: two; background: #48556a; }
+.card-3 { grid-area: three; background: var(--card-light); color: var(--text-dark); }
+.card-4 { grid-area: four; background: var(--darkblue); }
+.card-5 { grid-area: five; background: var(--card-light); color: var(--text-dark); }
+
+/* Profile */
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.5);
+}
+
+.card-3 img,
+.card-5 img {
+  border: 2px solid #ccc;
+}
+
+.profile h5 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.profile span {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Text */
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* Quote decoration */
+.card-1::after {
+  content: "“";
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 120px;
+  opacity: 0.1;
+}
+
+/* Responsive */
+@media(max-width: 992px) {
+  .testimonials {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "one one"
+      "two five"
+      "three four";
+  }
+}
+
+@media(max-width: 600px) {
+  .testimonials {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five";
+  }
+}

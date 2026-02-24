@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>P-Som Company</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<script src="https://js.stripe.com/v3/"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container py-4">
+
+<!-- Header -->
+<div class="d-flex justify-content-between align-items-center mb-3">
+<h4 class="fw-bold">P-Som Company</h4>
+
+<div>
+<select id="currency" class="form-select form-select-sm d-inline w-auto">
+<option value="usd">USD</option>
+<option value="eur">EUR</option>
+<option value="gbp">GBP</option>
+</select>
+
+🛒 <span id="cart-count" class="badge bg-dark">0</span>
+$<span id="cart-total">0</span>
+</div>
+</div>
+
+<!-- Services -->
+<div class="row g-3" id="services"></div>
+
+<!-- Cart -->
+<div class="mt-4 border p-3 rounded">
+<h6>Your Cart</h6>
+<div id="cart-items"></div>
+<button class="btn btn-dark w-100 mt-2" onclick="checkout()">Checkout</button>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

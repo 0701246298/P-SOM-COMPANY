@@ -1,0 +1,134 @@
+:root {
+  --bg: #f3f5f9;
+  --text-main: #2d3142;
+  --text-light: #6c757d;
+  --red: #ea5455;
+  --cyan: #45c4b0;
+  --orange: #f4a261;
+  --blue: #4ea8de;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text-main);
+  width: 100vw;
+
+}
+
+/* Section */
+.about-section {
+   background-color: #ececee;
+  padding:20px 10%;
+  text-align: center;
+  margin-bottom: 10px;
+
+}
+
+/* Header */
+.about-header h4 {
+  font-weight: 300;
+  color: var(--text-light);
+  font-size: 26px;
+}
+
+.about-header h2 {
+  font-weight: 600;
+  font-size: 36px;
+  margin: 10px 0 15px;
+}
+
+.about-header p {
+  max-width: 600px;
+  margin: 0 auto 60px;
+  color: var(--text-light);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Grid Layout */
+.about-grid {
+  display: grid;
+  margin-top: 2px;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "left center right"
+    "left bottom right";
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* Grid positioning */
+.card-left { grid-area: left; border-top: 4px solid var(--blue); }
+.card-center { grid-area: center; border-top: 4px solid var(--blue); }
+.card-bottom { grid-area: bottom; border-top: 4px solid var(--blue); }
+.card-right { grid-area: right; border-top: 4px solid var(--blue); }
+
+/* Text Styling */
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2d3142;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Icon */
+.card .icon {
+  text-align: right;
+  font-size: 40px;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media(max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "center center"
+      "left right"
+      "bottom bottom";
+  }
+}
+
+@media(max-width: 600px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "center"
+      "left"
+      "right"
+      "bottom";
+  }
+
+  .about-header h2 {
+    font-size: 28px;
+  }
+}
+

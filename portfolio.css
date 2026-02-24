@@ -1,0 +1,51 @@
+/* ===== Portfolio Section ===== */
+.portfolio-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 120px 8%;
+  background-color: #ececee;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  z-index: -2;
+}
+
+/* Soft texture overlay */
+.portfolio-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 40%, rgba(0,0,0,0.2), transparent 60%);
+}
+
+/* Content above */
+.portfolio-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== Floating Paper ===== */
+.floating-paper {
+    align-items: center;
+    justify-content: center;
+  position: absolute;
+  width: 450px;
+  height: 600px;
+  background: #fff;
+  border-radius: 12px;
+  top: 10%;
+  right: 40%;
+  transform: rotate(-20deg);
+  animation: floatPaper 6s ease-in-out infinite alternate;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.25);
+  z-index:-1 ;
+}
+
+@keyframes floatPaper {
+  from {
+    transform: rotate(-20deg) translateY(0px);
+  }
+  to {
+    transform: rotate(-18deg) translateY(-30px);
+  }
+}

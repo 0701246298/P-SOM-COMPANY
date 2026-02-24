@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #48556a;
+}
+
+/* PAGE TITLE */
+.page-title {
+    background-color:  #ececee;
+    color:#48556a;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.page-title h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+/* TOP SECTION */
+.top-section {
+    padding: 20px 10%;
+   background-color:  #ececee;
+}
+
+.top-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-box img {
+     width:500px;
+    height:400px;
+}
+
+
+.info-box{
+    background:rgba(255,255,255,0.6);
+    backdrop-filter:blur(20px);
+    padding: 60px 5%;
+    border-radius:24px;
+    width:500px;
+    height: 400px;
+    box-shadow:0 40px 80px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.info-box:hover{
+    transform:translateY(-6px);
+}
+
+.info-box h2{
+    color:#48556a;
+    font-size:13px;
+    margin-bottom:30px;
+}
+
+.info-box h4{
+    font-size:13px;
+    text-transform:uppercase;
+    margin-top:20px;
+    color:#64748b;
+    letter-spacing:1px;
+}
+
+.info-box p{
+    margin-top:6px;
+    font-size:15px;
+    
+}
+.info-box ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+/* ================= BOTTOM SECTION ================= */
+.bottom-section{
+    padding:20px 10%;
+    background-color:  #ececee;
+
+}
+
+.bottom-container{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
+    gap:60px;
+    margin-bottom: 40px;
+}
+
+/* ================= FLOATING LABEL FORM ================= */
+.form-section h2{
+    font-size:28px;
+    margin-bottom:30px;
+    color:#48556a;
+}
+
+.form-group{
+    position:relative;
+    margin-bottom:28px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:18px 14px;
+    border-radius:14px;
+    border:1px solid #cbd5e1;
+    background:white;
+    outline:none;
+    transition:0.3s;
+    font-size:14px;
+}
+
+.form-group textarea{
+    resize:none;
+}
+
+.form-group label{
+    position:absolute;
+    top:16px;
+    left:14px;
+    font-size:14px;
+    color:#64748b;
+    pointer-events:none;
+    transition:0.3s;
+    background:white;
+    padding:0 6px;
+}
+
+/* FLOATING EFFECT */
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label{
+    top:-10px;
+    font-size:12px;
+    color:#48556a;
+}
+
+/* INPUT ANIMATION */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+    border-color:#48556a;
+    box-shadow:0 0 0 4px rgba(30,58,138,0.08);
+}
+
+/* PHONE GROUP */
+.phone-group{
+    display:flex;
+    gap:12px;
+}
+
+.phone-group select{
+    width:120px;
+}
+
+/* BUTTON */
+.submit-btn{
+    margin-top:20px;
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(135deg,#64748b,#48556a);
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.submit-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 20px 40px rgba(37,99,235,0.3);
+}
+
+/* ================= DEPARTMENT CARD ================= */
+.department-box{
+    background:white;
+    padding:50px;
+    border-radius:24px;
+    box-shadow:0 30px 70px rgba(0,0,0,0.05);
+    transition:0.4s;
+}
+
+.department-box:hover{
+    transform:translateY(-6px);
+}
+
+.department-box h3{
+    font-size:15px;
+    margin-top:18px;
+    color:#48556a;
+}
+
+.department-box p{
+    font-size:14px;
+    color:#475569;
+}
+
+/* ================= HOURS ================= */
+.hours-section h2{
+    font-size:22px;
+    margin-bottom:30px;
+    color:#48556a;
+}
+
+.hours div{
+    display:flex;
+    justify-content:space-between;
+    padding:12px 0;
+    border-bottom:1px solid #e2e8f0;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.hours div:hover{
+    padding-left:6px;
+    color:#1254be;
+}
+
+/* RESPONSIVE */
+@media(max-width: 992px) {
+    .top-container {
+        flex-direction: column;
+    }
+
+    .bottom-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================= MAP ================= */
+
+.map-section iframe{
+    border-radius: 12px;
+    width:500px;
+    height:400px;
+    border:none;
+    border-radius:24px;
+    box-shadow:0 30px 80px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.map-section iframe:hover{
+    transform:scale(1.01);
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:1100px){
+    .top-container{
+        flex-direction:column;
+    }
+
+    .bottom-container{
+        grid-template-columns:1fr;
+    }
+}

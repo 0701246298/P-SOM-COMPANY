@@ -1,0 +1,255 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #000000;
+  width: 100vw;
+  height: 100vh;
+   background-image: 
+    linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
+  background-size: 80px 80px;
+  overflow-x: hidden;
+  
+}
+
+/* Hero Section */
+.hero {
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 10%;
+  position: relative;
+ 
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+   
+  width: 100%;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-bottom: 10px;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+.logo img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+/* Gold hover underline effect */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #d4af37;
+  transition: 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #d4af37;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Optional: Add subtle bottom border */
+.navbar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+
+/* Container */
+.container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* Left Side */
+.hero-left .version {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 14px;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.hero-left h1 {
+  font-size: 52px;
+  line-height: 1.15;
+  margin-bottom: 25px;
+  font-weight: 800;
+}
+
+.hero-left .gold {
+  color: #d4af37;
+}
+
+.hero-left p {
+  font-size: 18px;
+  color: #333;
+  max-width: 520px;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+/* Button */
+.btn-primary {
+  display: inline-block;
+  padding: 14px 30px;
+  background: #d4af37;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #b9962f;
+  transform: translateY(-3px);
+}/* =========================
+   RIGHT SIDE IMAGES
+========================= */
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Image Cards */
+.image-card {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #d4af37;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+/* Overlay Text */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* Hover Effect */
+.image-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Layout Sizes */
+.large {
+  height: 280px;
+}
+
+.image-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.medium {
+  height: 180px;
+}
+
+.small {
+  height: 180px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-left h1 {
+    font-size: 40px;
+  }
+}

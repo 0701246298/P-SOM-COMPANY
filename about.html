@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PSOM - About Section</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+  --bg: #f3f5f9;
+  --text-main: #2d3142;
+  --text-light: #6c757d;
+  --red: #ea5455;
+  --cyan: #45c4b0;
+  --orange: #f4a261;
+  --blue: #4ea8de;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text-main);
+  width: 100vw;
+}
+
+/* Section */
+.about-section {
+width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Header */
+.about-header h4 {
+  font-weight: 300;
+  color: var(--text-light);
+  font-size: 26px;
+}
+
+.about-header h2 {
+  font-weight: 600;
+  font-size: 36px;
+  margin: 10px 0 15px;
+}
+
+.about-header p {
+  max-width: 600px;
+  margin: 0 auto 60px;
+  color: var(--text-light);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Grid Layout */
+.about-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "left center right"
+    "left bottom right";
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* Grid positioning */
+.card-left { grid-area: left; border-top: 4px solid var(--cyan); }
+.card-center { grid-area: center; border-top: 4px solid var(--red); }
+.card-bottom { grid-area: bottom; border-top: 4px solid var(--orange); }
+.card-right { grid-area: right; border-top: 4px solid var(--blue); }
+
+/* Text Styling */
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Icon */
+.card .icon {
+  text-align: right;
+  font-size: 40px;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media(max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "center center"
+      "left right"
+      "bottom bottom";
+  }
+}
+
+@media(max-width: 600px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "center"
+      "left"
+      "right"
+      "bottom";
+  }
+
+  .about-header h2 {
+    font-size: 28px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<section class="about-section">
+
+  <div class="about-header">
+    <h4>Reliable. Strategic. Innovative.</h4>
+    <h2>About PSOM Company</h2>
+    <p>
+      At PSOM Company, we combine strategic thinking, innovation, and technology 
+      to deliver measurable results. Our expertise ensures that every project is 
+      executed with precision and long-term success in mind.
+    </p>
+  </div>
+
+  <div class="about-grid">
+
+    <div class="card card-left">
+      <h3>Project Supervision</h3>
+      <p>
+        We monitor and evaluate every phase of execution to ensure
+        efficiency, minimize risks, and eliminate operational roadblocks.
+      </p>
+      <div class="icon">🔎</div>
+    </div>
+
+    <div class="card card-center">
+      <h3>Strategic Planning</h3>
+      <p>
+        Our team builds data-driven strategies aligned with your
+        long-term goals to maximize performance and scalability.
+      </p>
+      <div class="icon">📊</div>
+    </div>
+
+    <div class="card card-bottom">
+      <h3>Performance Excellence</h3>
+      <p>
+        We continuously assess and refine processes to ensure
+        sustainable growth and exceptional quality standards.
+      </p>
+      <div class="icon">💡</div>
+    </div>
+
+    <div class="card card-right">
+      <h3>Data & Analytics</h3>
+      <p>
+        Using advanced analytics tools, we transform insights into
+        actionable decisions that drive measurable outcomes.
+      </p>
+      <div class="icon">🖥️</div>
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+</html>

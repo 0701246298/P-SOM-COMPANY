@@ -1,0 +1,120 @@
+:root {
+  --bg: #f3f5f9;
+  --text-main: #2d3142;
+  --text-light: #6c757d;
+  --red: #ea5455;
+  --cyan: #45c4b0;
+  --orange: #f4a261;
+  --blue: #4ea8de;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text-main);
+  width: 100vw;
+
+}
+
+
+* {
+ 
+  box-sizing: border-box;
+}
+
+.hero {
+  overflow: hidden;
+  width: 100vw;
+  padding: 20px 10%;
+}
+
+
+/* HERO SECTION */
+.hero-content {
+ padding: 20px 10%;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  color: #222;
+}
+
+.hero-content p {
+  color: #666;
+  margin-bottom: 50px;
+  font-size: 1.1rem;
+}
+
+/* CONTAINER */
+.container {
+  margin: auto;
+}
+
+/* SERVICES GRID */
+.services-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+
+/* CARD DESIGN */
+.service-card {
+  box-shadow: 5px 5px 15px #f3f5f9,-5px -5px 15px #444d6e;
+  padding: 20px 10%;
+  width: 350px;
+  text-align: center;
+  border-radius: 10px;
+   transition: all 0.35s ease;
+}
+
+
+/* Hover effect */
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px #f3f5f9,
+              inset 0 0 0 1px #444d6e;
+}
+
+/* ICON */
+.icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+/* TITLE */
+.service-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+/* DESCRIPTION */
+.service-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .service-card {
+    flex: 0 0 calc(50% - 15px);
+  }
+}
+
+@media (max-width: 600px) {
+  .service-card {
+    flex: 0 0 100%;
+  }
+}

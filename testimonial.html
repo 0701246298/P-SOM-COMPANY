@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testimonials Grid</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+  --bg: #edf2f8;
+  --card-light: #ffffff;
+  --text-dark: #48556a;
+  --purple: #733fc8;
+  --grayblue: #48556a;
+  --darkblue: #19202d;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --card-light: #1e293b;
+  --text-dark: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  transition: 0.3s ease;
+}
+
+/* Toggle Button */
+.toggle-container {
+  text-align: right;
+  padding: 20px 40px 0;
+}
+
+.toggle-btn {
+  padding: 8px 18px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: var(--purple);
+  color: white;
+  transition: 0.3s ease;
+}
+
+.toggle-btn:hover {
+  opacity: 0.85;
+}
+
+/* Grid Layout */
+.testimonials {
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "one one two five"
+    "three four four five";
+}
+
+/* Card Base */
+.card {
+  padding: 30px;
+  border-radius: 15px;
+  color: white;
+  position: relative;
+  transition: all 0.35s ease;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+/* Card Positions */
+.card-1 { grid-area: one; background: var(--purple); }
+.card-2 { grid-area: two; background: #48556a; }
+.card-3 { grid-area: three; background: var(--card-light); color: var(--text-dark); }
+.card-4 { grid-area: four; background: var(--darkblue); }
+.card-5 { grid-area: five; background: var(--card-light); color: var(--text-dark); }
+
+/* Profile */
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.5);
+}
+
+.card-3 img,
+.card-5 img {
+  border: 2px solid #ccc;
+}
+
+.profile h5 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.profile span {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Text */
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* Quote decoration */
+.card-1::after {
+  content: "“";
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 120px;
+  opacity: 0.1;
+}
+
+/* Responsive */
+@media(max-width: 992px) {
+  .testimonials {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "one one"
+      "two five"
+      "three four";
+  }
+}
+
+@media(max-width: 600px) {
+  .testimonials {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five";
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="toggle-container">
+  <button class="toggle-btn" onclick="toggleMode()">🌙 Toggle Dark Mode</button>
+</div>
+
+<section class="testimonials">
+
+  <div class="card card-1">
+    <div class="profile">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg">
+      <div>
+        <h5>Daniel Clifford</h5>
+        <span>Verified Graduate</span>
+      </div>
+    </div>
+    <h3>I received a job offer mid-course, and the subjects I learned were current.</h3>
+    <p>I was an EMT before joining the bootcamp. The next 12 weeks were intense but rewarding. I successfully switched careers and now work as a Software Engineer.</p>
+  </div>
+
+  <div class="card card-2">
+    <div class="profile">
+      <img src="https://randomuser.me/api/portraits/men/45.jpg">
+      <div>
+        <h5>Jonathan Walters</h5>
+        <span>Verified Graduate</span>
+      </div>
+    </div>
+    <h3>The team was very supportive and kept me motivated</h3>
+    <p>I started as a newbie with no coding skills. Now I work as a mobile engineer — one of the best investments I've made.</p>
+  </div>
+
+  <div class="card card-3">
+    <div class="profile">
+      <img src="https://randomuser.me/api/portraits/women/43.jpg">
+      <div>
+        <h5>Jeanette Harmon</h5>
+        <span>Verified Graduate</span>
+      </div>
+    </div>
+    <h3>An overall wonderful experience</h3>
+    <p>Thank you for the wonderful experience! I now have a job I enjoy and make a living doing something I love.</p>
+  </div>
+
+  <div class="card card-4">
+    <div class="profile">
+      <img src="https://randomuser.me/api/portraits/men/76.jpg">
+      <div>
+        <h5>Patrick Abrams</h5>
+        <span>Verified Graduate</span>
+      </div>
+    </div>
+    <h3>Awesome teaching support from TAs who did the bootcamp themselves.</h3>
+    <p>The staff genuinely cared about my progress. The program gave me confidence to present myself as a capable junior developer.</p>
+  </div>
+
+  <div class="card card-5">
+    <div class="profile">
+      <img src="https://randomuser.me/api/portraits/women/65.jpg">
+      <div>
+        <h5>Kira Whittle</h5>
+        <span>Verified Graduate</span>
+      </div>
+    </div>
+    <h3>Such a life-changing experience. Highly recommended!</h3>
+    <p>The entire curriculum and staff did not disappoint. It helped me land a full-stack developer role after multiple offers.</p>
+  </div>
+
+</section>
+
+<script>
+function toggleMode() {
+  document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
