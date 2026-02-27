@@ -6,6 +6,7 @@
   --purple: #19202d;
   --grayblue: #48556a;
   --darkblue: #19202d;
+  --secondary-color:#f0f0f0;
 }
 
 
@@ -47,7 +48,8 @@ body {
   margin: 80px 20px;
   padding:20px 10%;
   text-align: center;
-  margin-top: 0px;
+  background: var(--bg);
+  width: 100vw;
 
 }
 .testimonials{
@@ -65,6 +67,7 @@ body {
 /* Card Base */
 .card {
   padding: 30px;
+   margin-bottom: 40px;
   border-radius: 15px;
   color: white;
   position: relative;

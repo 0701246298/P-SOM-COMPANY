@@ -13,10 +13,11 @@
   <link rel="stylesheet" href="contact.css">
   <link rel="stylesheet" href="team.css">
   <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="script.js">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
 </head>
-<body>
+<body class="dark">
 
 <section class="hero">
     
@@ -32,19 +33,24 @@
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#contact">Contact</a></li>
     </ul>
+    <div class="hamburger" id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<button id="darkToggle" class="dark-toggle">🌙</button>
   </nav>
   <div class="container">
     
     <div class="hero-left">
-      <span class="version">VERSION 1.0</span>
       
-      <h1>
+      <h1 class="reveal">
         P-som <span class="gold">Company</span><br>
         Ventures Limited<br>
         Sustainable Plastics and electrical solutions.
       </h1>
 
-      <p>
+      <p class="reveal">
        
         We deliver intelligent digital solutions designed to simplify operations, 
         enhance customer experiences, and drive sustainable growth.
@@ -52,7 +58,7 @@
          and cutting-edge technology to help businesses operate smarter .
       </p>
 
-      <a href="#" class="btn-primary">Get Started</a>
+      <a href="#" class="btn-primary reveal">Get Started</a>
     </div>
 
    <div class="hero-right">
@@ -135,19 +141,21 @@
 
 </section>
 
-<section class="hero" id="services">
+<section class="ero" id="services">
   <!--  <div class="slide"></div>
     <div class="slide"></div>
     <div class="slide"></div>-->
 
-    <div class="hero-content">
-      <h1>Our  services </h1>
+    <div class="hro-content">
+      <h2>Our  services </h2>
       <p>What we Offer.</p>
+      </div>
 
-       <div class="container">
+       <div  class="cntainer">
     
 
     <div class="services-wrapper">
+
 
       <div class="service-card">
         <div class="icon">💻</div>
@@ -166,6 +174,7 @@
         <h3>UI/UX Design</h3>
         <p>User-centered designs that enhance engagement and improve usability.</p>
       </div>
+  
 
       <div class="service-card" >
         <div class="icon">📈</div>
@@ -186,79 +195,76 @@
       </div>
 
     </div>
-  </div>
+  
     </div>
+  
     
 
   </section>
 
 <section id="team">
   <div class="team-section">
-   <div class="hero-content">
-      <h1>Team </h1>
-      <p>The collaborators</p>
-  <div class="team-container">
-
-    <!-- LEFT SIDE -->
-    <div class="team-left">
-      <h2>Meet the<br>vision bearers</h2>
-
-      <div class="featured-card">
-        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
-        <h3>Aleena Jonathan</h3>
-        <p>The Manager</p>
-
-        <div class="nav-buttons">
-          <span>&larr;</span>
-          <span>&rarr;</span>
-        </div>
-      </div>
+    <!-- Header -->
+    <div class="hero-content">
+      <h1>Our Team</h1>
+      <p>Meet the collaborators driving our mission forward</p>
     </div>
 
-    <!-- RIGHT SIDE -->
-    <div class="team-right">
-      <p class="team-description">
-       
-       The PSOM team is a dedicated group of professionals committed to excellence, 
-       innovation, and collaboration. With diverse expertise and a shared vision,
-        we work together to deliver 
-       impactful solutions and drive meaningful results for our community and partners.   </p>
+    <!-- Main Content -->
+    <div class="team-container">
 
-      <div class="avatar-row">
-        <img src="https://randomuser.me/api/portraits/men/32.jpg">
-        <img src="https://randomuser.me/api/portraits/women/68.jpg">
-        <img src="https://randomuser.me/api/portraits/men/75.jpg">
-        <img src="https://randomuser.me/api/portraits/men/45.jpg">
-        <img src="https://randomuser.me/api/portraits/women/22.jpg">
-        <img src="https://randomuser.me/api/portraits/men/90.jpg">
+      <!-- LEFT: Manager Card -->
+      <div class="team-left">
+        <h2>Meet the<br>Vision Bearers</h2>
+
+        <div class="featured-card">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Manager">
+          <h3>Aleena Jonathan</h3>
+          <p>The Manager</p>
+        </div>
       </div>
 
-      <div class="info-bar">
-        <div>
-          <small>Years of experience</small>
-          <h4>5+ Years</h4>
-        </div>
-        <div>
-          <small>Location</small>
-          <h4>Kenya</h4>
-        </div>
-        <div>
-          <small>Email address</small>
-          <h4>psom@gmail.com</h4>
+      <!-- RIGHT: Avatars + Info -->
+      <div class="team-right">
+        <p class="team-description">
+          The PSOM team is a dedicated group of professionals committed to excellence, 
+          innovation, and collaboration. With diverse expertise and a shared vision,
+          we work together to deliver impactful solutions.
+        </p>
+
+        <!-- Avatars -->
+        <div class="avatar-row">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team Member 1">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Team Member 2">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Team Member 3">
+          <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Team Member 4">
+          <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Team Member 5">
+          <img src="https://randomuser.me/api/portraits/men/90.jpg" alt="Team Member 6">
         </div>
 
-      </div>
-      
+        <!-- Info Bar -->
+        <div class="info-bar">
+          <div>
+            <small>Years of experience</small>
+            <h4>5+ Years</h4>
+          </div>
+          <div>
+            <small>Location</small>
+            <h4>Kenya</h4>
+          </div>
+          <div>
+            <small>Email address</small>
+            <h4>psom@gmail.com</h4>
+          </div>
+        </div>
 
-         <p class="team-description">
+        <p class="team-description">
           At PSOM, our team is driven by passion, integrity, 
-          
           and a commitment to delivering outstanding results.
-           By combining experience, innovation, and teamwork, 
-           we strive to create solutions that make a lasting impact and move our mission forward. </p>
-    </div>
+        </p>
+      </div>
 
-  </div>
+    </div>
   </div>
 </section>
 
@@ -331,141 +337,97 @@
   </div>
   </div>
 
+</section><!-- ================= PAGE TITLE ================= -->
+<section class="page-title" id="contact">
+  <h1>Contact Us</h1>
 </section>
 
+<!-- ================= MAP SECTION ================= -->
+<section class="map-section">
+  <iframe 
+      src="https://www.google.com/maps?q=Naivas+Muthokinju+Pacific+Mall+Syokimau+Nairobi+Kenya&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
 
-    <!-- HEADER -->
-    <section class="page-title" id="contact">
-        <h1>CONTACT US</h1>
-    </section>
+<!-- ================= CONTACT SECTION ================= -->
+<section class="contact-section">
+  <div class="contact-container">
 
-    <!-- TOP SECTION -->
-    <section class="top-section" id="contact">
-        <div class="top-container">
-
-            <!-- LEFT IMAGE -->
-            <div class="image-box">
-                <img src="./sockets.jpg" alt="Company Image">
-            </div>
-
-            <!-- RIGHT INFO BOX -->
-            <div class="info-box">
-                <h2>PSOM COMPANY INQUIRIES ARE BY APPOINTMENT ONLY.</h2>
-
-                <div class="contact-details">
-                    <h4>PHONE NUMBER</h4>
-                    <p>(123) 456-7890</p>
-
-                    <h4>GENERAL EMAIL</h4>
-                    <p>info@psomcompany.com</p>
-
-                    <p class="address">
-                        123 Business Street <br>
-                        City, State 00000
-                    </p>
-
-                    <h4>We are closed on:</h4>
-                    <ul>
-                        <li>Public Holidays</li>
-                        <li>Major National Holidays</li>
-                    </ul>
-                </div>
-            </div>
-                         
-    <div class="map-section">
-         <iframe 
-        src="https://www.google.com/maps?q=Naivas+Muthokinju+Pacific+Mall+Syokimau+Nairobi+Kenya&output=embed"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>   
-  </div>
-
-        </div>
-    </section>
-
-    <!-- BOTTOM SECTION -->
-   
-
-<section class="bottom-section" id="contact">
-    <div class="bottom-container">
-
-        <!-- FORM -->
-        <div class="form-section">
-            <h2>Get In Touch</h2>
-
-            <div class="form-group">
-                <input type="text" placeholder=" " required>
-                <label>First Name</label>
-            </div>
-
-            <div class="form-group">
-                <input type="text" placeholder=" " required>
-                <label>Last Name</label>
-            </div>
-
-            <div class="form-group">
-                <input type="email" placeholder=" " required>
-                <label>Email</label>
-            </div>
-
-            <div class="phone-group">
-                <div class="form-group" style="flex:1;">
-                    <select>
-                        <option>+1</option>
-                        <option>+44</option>
-                        <option>+91</option>
-                        <option>+234</option>
-                    </select>
-                </div>
-
-                <div class="form-group" style="flex:3;">
-                    <input type="text" placeholder=" " required>
-                    <label>Phone Number</label>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <textarea rows="4" placeholder=" " required></textarea>
-                <label>How can we help you?</label>
-            </div>
-
-            <button class="submit-btn">Send Message</button>
+    <!-- LEFT: CONTACT FORM -->
+    <div class="form-card">
+      <h2>Get In Touch</h2>
+      <form>
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" id="firstName" required placeholder=" ">
+            <label for="firstName">First Name</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="lastName" required placeholder=" ">
+            <label for="lastName">Last Name</label>
+          </div>
         </div>
 
-        <!-- DEPARTMENTS -->
-        <div class="department-box">
-            <h3>Sales Inquiries</h3>
-            <p>sales@psomcompany.com</p>
-
-            <h3>Support</h3>
-            <p>support@psomcompany.com</p>
-
-            <h3>Partnership</h3>
-            <p>partners@psomcompany.com</p>
-
-            <h3>General</h3>
-            <p>info@psomcompany.com</p>
+        <div class="form-group">
+          <input type="email" id="email" required placeholder=" ">
+          <label for="email">Email Address</label>
         </div>
 
-        <!-- HOURS -->
-        <div class="hours-section">
-            <h2>Hours of Operation</h2>
-            <div class="hours">
-                <div><span>Monday</span><span>9am – 6pm</span></div>
-                <div><span>Tuesday</span><span>9am – 6pm</span></div>
-                <div><span>Wednesday</span><span>9am – 6pm</span></div>
-                <div><span>Thursday</span><span>9am – 6pm</span></div>
-                <div><span>Friday</span><span>9am – 6pm</span></div>
-                <div><span>Saturday</span><span>Closed</span></div>
-                <div><span>Sunday</span><span>Closed</span></div>
-            </div>
+        <div class="form-row phone-row">
+          <div class="form-group select-group">
+            <select id="countryCode">
+              <option>+1</option>
+              <option>+44</option>
+              <option>+91</option>
+              <option>+254</option>
+            </select>
+            <label for="countryCode">Country Code</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="phone" required placeholder=" ">
+            <label for="phone">Phone Number</label>
+          </div>
         </div>
 
+        <div class="form-group">
+          <textarea id="message" rows="5" required placeholder=" "></textarea>
+          <label for="message">How can we help you?</label>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
     </div>
 
+    <!-- RIGHT: INFO PANEL -->
+    <div class="info-card">
+      <h3>Contact Information</h3>
 
+      <div class="info-block">
+        <strong>Phone</strong>
+        <p>(123) 456-7890</p>
+      </div>
+
+      <div class="info-block">
+        <strong>Email</strong>
+        <p>info@psomcompany.com</p>
+      </div>
+
+      <div class="info-block">
+        <strong>Address</strong>
+        <p>123 Business Street <br> City, State 00000</p>
+      </div>
+
+      <div class="info-block">
+        <strong>Working Hours</strong>
+        <p>Mon – Fri: 9AM – 6PM</p>
+        <p>Sat – Sun: Closed</p>
+      </div>
+    </div>
+
+  </div>
 </section>
-
 
 <footer class="footer">
 
@@ -524,5 +486,127 @@
     </div>
 
 </footer>
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.querySelector(".nav-links");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("active");
+  });
+
+   const reveals = document.querySelectorAll(".reveal");
+
+  function revealOnScroll() {
+    const trigger = window.innerHeight * 0.85;
+
+    reveals.forEach(reveal => {
+      const top = reveal.getBoundingClientRect().top;
+
+      if (top < trigger) {
+        reveal.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+
+  
+  const sections = document.querySelectorAll("section");
+  const navItems = document.querySelectorAll(".nav-links a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 150;
+      const sectionHeight = section.offsetHeight;
+
+      if (pageYOffset >= sectionTop &&
+          pageYOffset < sectionTop + sectionHeight) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navItems.forEach(link => {
+      link.classList.remove("active-link");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active-link");
+      }
+    });
+  });
+  const toggle = document.getElementById("darkToggle");
+
+  // Apply saved theme on page load
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    toggle.textContent = "☀️";
+  }
+
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+      toggle.textContent = "☀️";
+    } else {
+      localStorage.setItem("theme", "light");
+      toggle.textContent = "🌙";
+    }
+  });//team section
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* Scroll Reveal */
+  const revealElements = document.querySelectorAll(
+    "#team .hero-content, .featured-card, .team-description, .info-bar"
+  );
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("reveal");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  revealElements.forEach(el => observer.observe(el));
+
+  /* Animated Counter */
+  const counter = document.querySelector(".info-bar h4");
+  let started = false;
+
+  const countObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !started) {
+        started = true;
+        let count = 0;
+        const target = 5; // years
+        const interval = setInterval(() => {
+          count++;
+          counter.textContent = count + "+ Years";
+          if (count >= target) clearInterval(interval);
+        }, 200);
+      }
+    });
+  });
+
+  countObserver.observe(counter);
+
+  /* Avatar Interaction – Manager stays static */
+  const avatars = document.querySelectorAll(".avatar-row img");
+  // const featuredImg = document.querySelector(".featured-card img"); // Removed
+  const managerAvatar = document.querySelector(".featured-card img"); // Keep manager image
+
+  avatars.forEach(avatar => {
+    avatar.addEventListener("click", () => {
+      avatars.forEach(a => a.classList.remove("active"));
+      avatar.classList.add("active");
+
+      // Do NOT change manager image, so featured-card img remains the same
+      // Optional: you could show info elsewhere instead
+    });
+  });
+
+});</script>
 </body>
 </html>

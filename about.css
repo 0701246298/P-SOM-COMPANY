@@ -1,11 +1,25 @@
+/* Define all variables in root for light mode */
 :root {
-  --bg: #f3f5f9;
-  --text-main: #2d3142;
+  --bg-color: #f5fafb;
+  --text-main: #ffffff;
   --text-light: #6c757d;
-  --red: #ea5455;
-  --cyan: #45c4b0;
-  --orange: #f4a261;
+  --card-bg: #ffffff;
+  --card-shadow: 0 15px 40px rgba(0,0,0,0.08);
   --blue: #4ea8de;
+   --primary-color: #3498db;
+
+ 
+}
+
+/* Dark mode overrides */
+body.dark {
+  --bg-color: #3a454c;
+  --text-main: #ffffff;
+  --text-light: #cccccc;
+  --card-bg: #1a1a1a;
+    --blue: #e7edf0;
+  --card-shadow: 0 15px 40px rgba(255,255,255,0.05);
+   --primary-color: #e9eef1;
 }
 
 * {
@@ -16,20 +30,39 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: var(--bg);
-  color: var(--text-main);
   width: 100vw;
 
 }
 
-/* Section */
+/* About section */
 .about-section {
-   background-color: #ececee;
-  padding:20px 10%;
+  background-color: var(--bg-color);
+  padding: 20px 10%;
   text-align: center;
-  margin-bottom: 10px;
-
+  margin-bottom: 0px;
+  padding-bottom: 50px;
+  transition: background 0.4s ease, color 0.4s ease;
 }
+/* Cards */
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: var(--card-shadow);
+  transition: all 0.35s ease;
+  position: relative;
+  color: var(--text-light);
+}
+
+.about-grid .card h3 {
+  color: var(--text-light);
+}
+
+.card p {
+  color: var(--text-light);
+}
+/* Section */
+
 
 /* Header */
 .about-header h4 {
@@ -63,15 +96,6 @@ body {
     "left bottom right";
 }
 
-/* Cards */
-.card {
-  background: white;
-  border-radius: 12px;
-  text-align: left;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-  transition: all 0.35s ease;
-  position: relative;
-}
 
 .card:hover {
   transform: translateY(-10px);
@@ -84,23 +108,9 @@ body {
 .card-bottom { grid-area: bottom; border-top: 4px solid var(--blue); }
 .card-right { grid-area: right; border-top: 4px solid var(--blue); }
 
-/* Text Styling */
-.card h3 {
-  margin-bottom: 10px;
-  font-size: 20px;
-  font-weight: 600;
-  color: #2d3142;
-}
-
-.card p {
-  font-size: 14px;
-  color: var(--text-light);
-  line-height: 1.6;
-  margin-bottom: 25px;
-}
 
 /* Icon */
-.card .icon {
+.about-grid.card .icon {
   text-align: right;
   font-size: 40px;
   opacity: 0.8;
