@@ -19,7 +19,8 @@ body.dark {
 }
 
 #team {
-  padding: 120px 5%;
+  padding: 60px 60px;
+  right: 100px;
   background:var(--bg-color) ; 
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
@@ -60,6 +61,7 @@ body.dark #team .hero-content p {
   max-width: 1200px;
   margin: auto;
   align-items: center;
+  padding-left: 50px;
 }
 
 /* =========================
@@ -77,12 +79,13 @@ body.dark #team .hero-content p {
 
 /* Glass Card */
 .featured-card {
+   padding: 60px 60px;
   background: var(--card-color);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 
   border-radius: 20px;
-  padding: 40px;
+
   text-align: center;
 
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
@@ -255,6 +258,7 @@ body.dark .info-bar small {
     justify-content: center;
   }
 }
+
 /* ============================= */
 /* 📱 MOBILE RESPONSIVE FIX */
 /* ============================= */
@@ -279,7 +283,7 @@ body.dark .info-bar small {
     position: absolute;
     top: 70px;
     right: 0;
-    background: #111;
+   /* background: #111;*/
     width: 100%;
     flex-direction: column;
     text-align: center;
@@ -292,7 +296,7 @@ body.dark .info-bar small {
   }
 
   .hamburger {
-    display: block;
+    display: flex;
   }
 
   /* HERO SECTION */

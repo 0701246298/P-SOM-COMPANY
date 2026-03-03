@@ -203,6 +203,7 @@ body{
     padding:50px 5%;
   }
 }
+
 /* ============================= */
 /* 📱 MOBILE RESPONSIVE FIX */
 /* ============================= */
@@ -227,7 +228,7 @@ body{
     position: absolute;
     top: 70px;
     right: 0;
-    background: #111;
+     /* background: #111;*/
     width: 100%;
     flex-direction: column;
     text-align: center;
@@ -240,7 +241,7 @@ body{
   }
 
   .hamburger {
-    display: block;
+    display: flex;
   }
 
   /* HERO SECTION */

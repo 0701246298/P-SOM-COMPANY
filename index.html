@@ -18,11 +18,14 @@
   
 </head>
 <body class="dark">
-
-<section class="hero">
-    
+     
   <nav class="navbar">
-    <div class="logo"> <img src="./src/logo.jpeg" alt="">✦ P-som Company</div>
+      <div class="hamburger" id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+    <div class="logo"> <img src="./src/logo.jpeg" alt="">✦ P-som</div>
 
     <ul class="nav-links">
     <li><a href="#home">Home</a></li>
@@ -32,13 +35,11 @@
     <li><a href="#testimonials">Testimonials</a></li>
     <li><a href="#contact">Contact</a></li>
     </ul>
-    <div class="hamburger" id="hamburger">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+  
 <button id="darkToggle" class="dark-toggle">🌙</button>
   </nav>
+<section class="hero">
+ 
   <div class="container">
     
     <div class="hero-left">
@@ -60,25 +61,27 @@
       <a href="#" class="btn-primary reveal">Get Started</a>
     </div>
 
-   <div class="hero-right">
-
+   <div class="hero-right" >
   <div class="image-card large">
     <img src="./src/electricals.jpg" alt="Sustainable Plastic Production">
     <div class="overlay">Sustainable Plastic Solutions</div>
-  </div>
 
-  <div class="image-row">
+    </div>
+   <div class="heroes">
+      
     <div class="image-card medium">
       <img src="./src/hdpe.jpg" alt="Electrical Installation">
       <div class="overlay">Electrical Installations</div>
-    </div>
+    
+       </div>
 
-    <div class="image-card small">
+   <div class="image-card small">
       <img src="./src/ppr.jpg" alt="Industrial Wiring">
       <div class="overlay">Industrial Electrical Systems</div>
+   
     </div>
-  </div>
-
+    
+   
 </div>
 
   </div>
@@ -488,13 +491,23 @@
 <script>
   const hamburger = document.getElementById("hamburger");
   const navLinks = document.querySelector(".nav-links");
+  const navItems = document.querySelectorAll(".nav-links a");
 
+  // Hamburger toggle
   hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
     navLinks.classList.toggle("active");
   });
 
-   const reveals = document.querySelectorAll(".reveal");
+  // Close hamburger menu when a nav link is clicked
+  navItems.forEach(link => {
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navLinks.classList.remove("active");
+    });
+  });
+
+  const reveals = document.querySelectorAll(".reveal");
 
   function revealOnScroll() {
     const trigger = window.innerHeight * 0.85;
@@ -510,9 +523,7 @@
 
   window.addEventListener("scroll", revealOnScroll);
 
-  
   const sections = document.querySelectorAll("section");
-  const navItems = document.querySelectorAll(".nav-links a");
 
   window.addEventListener("scroll", () => {
     let current = "";
@@ -534,6 +545,7 @@
       }
     });
   });
+
   const toggle = document.getElementById("darkToggle");
 
   // Apply saved theme on page load
@@ -552,60 +564,58 @@
       localStorage.setItem("theme", "light");
       toggle.textContent = "🌙";
     }
-  });//team section
-document.addEventListener("DOMContentLoaded", function () {
-
-  /* Scroll Reveal */
-  const revealElements = document.querySelectorAll(
-    "#team .hero-content, .featured-card, .team-description, .info-bar"
-  );
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("reveal");
-      }
-    });
-  }, { threshold: 0.2 });
-
-  revealElements.forEach(el => observer.observe(el));
-
-  /* Animated Counter */
-  const counter = document.querySelector(".info-bar h4");
-  let started = false;
-
-  const countObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !started) {
-        started = true;
-        let count = 0;
-        const target = 5; // years
-        const interval = setInterval(() => {
-          count++;
-          counter.textContent = count + "+ Years";
-          if (count >= target) clearInterval(interval);
-        }, 200);
-      }
-    });
   });
 
-  countObserver.observe(counter);
+  // Team section
+  document.addEventListener("DOMContentLoaded", function () {
+    /* Scroll Reveal */
+    const revealElements = document.querySelectorAll(
+      "#team .hero-content, .featured-card, .team-description, .info-bar"
+    );
 
-  /* Avatar Interaction – Manager stays static */
-  const avatars = document.querySelectorAll(".avatar-row img");
-  // const featuredImg = document.querySelector(".featured-card img"); // Removed
-  const managerAvatar = document.querySelector(".featured-card img"); // Keep manager image
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal");
+        }
+      });
+    }, { threshold: 0.2 });
 
-  avatars.forEach(avatar => {
-    avatar.addEventListener("click", () => {
-      avatars.forEach(a => a.classList.remove("active"));
-      avatar.classList.add("active");
+    revealElements.forEach(el => observer.observe(el));
 
-      // Do NOT change manager image, so featured-card img remains the same
-      // Optional: you could show info elsewhere instead
+    /* Animated Counter */
+    const counter = document.querySelector(".info-bar h4");
+    let started = false;
+
+    const countObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !started) {
+          started = true;
+          let count = 0;
+          const target = 5; // years
+          const interval = setInterval(() => {
+            count++;
+            counter.textContent = count + "+ Years";
+            if (count >= target) clearInterval(interval);
+          }, 200);
+        }
+      });
+    });
+
+    countObserver.observe(counter);
+
+    /* Avatar Interaction – Manager stays static */
+    const avatars = document.querySelectorAll(".avatar-row img");
+    const managerAvatar = document.querySelector(".featured-card img"); // Keep manager image
+
+    avatars.forEach(avatar => {
+      avatar.addEventListener("click", () => {
+        avatars.forEach(a => a.classList.remove("active"));
+        avatar.classList.add("active");
+        // Manager image remains unchanged
+      });
     });
   });
-
-});</script>
+</script>
 </body>
 </html>

@@ -111,6 +111,7 @@ body.dark {
 
 /* BADGES */
 .footer-badges{
+    align-items: center;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -185,6 +186,7 @@ body.dark {
         margin: 8px 0;
     }
 }
+
 /* ============================= */
 /* 📱 MOBILE RESPONSIVE FIX */
 /* ============================= */
@@ -209,7 +211,7 @@ body.dark {
     position: absolute;
     top: 70px;
     right: 0;
-    background: #111;
+    /* background: #111;*/
     width: 100%;
     flex-direction: column;
     text-align: center;
@@ -222,7 +224,7 @@ body.dark {
   }
 
   .hamburger {
-    display: block;
+    display: flex;
   }
 
   /* HERO SECTION */
